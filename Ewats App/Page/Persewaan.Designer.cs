@@ -40,6 +40,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +90,7 @@
             this.Image,
             this.Nama,
             this.Harga});
+            this.ListMenu.HideSelection = false;
             this.ListMenu.Location = new System.Drawing.Point(7, 52);
             this.ListMenu.Name = "ListMenu";
             this.ListMenu.Size = new System.Drawing.Size(744, 491);
@@ -174,12 +177,34 @@
             this.label12.TabIndex = 74;
             this.label12.Text = "ORDER SEWA";
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Location = new System.Drawing.Point(0, 612);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(756, 5);
+            this.panel5.TabIndex = 76;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(756, 5);
+            this.panel4.TabIndex = 77;
+            // 
             // Persewaan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(756, 605);
+            this.ClientSize = new System.Drawing.Size(756, 617);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
@@ -213,5 +238,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
     }
 }

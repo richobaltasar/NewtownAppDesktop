@@ -73,6 +73,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel12.SuspendLayout();
             this.panelInputManual.SuspendLayout();
             this.panelNominal.SuspendLayout();
@@ -80,6 +81,7 @@
             this.PanelHitung.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel12
@@ -307,7 +309,7 @@
             this.panelKeyb.Controls.Add(this.button18);
             this.panelKeyb.Controls.Add(this.panel11);
             this.panelKeyb.Controls.Add(this.label4);
-            this.panelKeyb.Location = new System.Drawing.Point(678, 53);
+            this.panelKeyb.Location = new System.Drawing.Point(679, 53);
             this.panelKeyb.Name = "panelKeyb";
             this.panelKeyb.Size = new System.Drawing.Size(339, 533);
             this.panelKeyb.TabIndex = 34;
@@ -692,7 +694,7 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(48, 10);
+            this.label2.Location = new System.Drawing.Point(43, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 36);
             this.label2.TabIndex = 45;
@@ -701,29 +703,39 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Location = new System.Drawing.Point(2, 51);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 2);
+            this.panel1.Size = new System.Drawing.Size(1127, 2);
             this.panel1.TabIndex = 46;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Ewats_App.Properties.Resources.Login1;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 51;
             this.pictureBox2.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1127, 47);
+            this.panel2.TabIndex = 52;
+            // 
             // Topup
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelHitung);
             this.Controls.Add(this.panelKeyb);
             this.Controls.Add(this.panelNominal);
@@ -744,8 +756,9 @@
             this.PanelHitung.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -796,5 +809,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
     }
 }

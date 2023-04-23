@@ -28,40 +28,42 @@ namespace Ewats_App.Page
             dt_grid.Columns[0].Name = "Nama Ticket";
             dt_grid.Columns[1].Name = "Total";
 
-            dt_grid.RowHeadersVisible = false;
-            dt_grid.ColumnHeadersVisible = true;
-            DataGridViewColumn column1 = dt_grid.Columns[0];
-            DataGridViewColumn column2 = dt_grid.Columns[1];
-
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
-            dt_grid.BorderStyle = BorderStyle.None;
+            dt_grid.Dock = DockStyle.Fill;
+            dt_grid.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dt_grid.BorderStyle = BorderStyle.Fixed3D;
+            // Set property values appropriate for read-only display and 
+            // limited interactivity. 
             dt_grid.AllowUserToAddRows = false;
             dt_grid.AllowUserToDeleteRows = false;
             dt_grid.AllowUserToOrderColumns = true;
             dt_grid.ReadOnly = true;
             dt_grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dt_grid.MultiSelect = true;
-            dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dt_grid.AllowUserToResizeColumns = true;
-            dt_grid.ColumnHeadersHeightSizeMode =
-                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dt_grid.MultiSelect = false;
+            dt_grid.AllowUserToResizeColumns = false;
             dt_grid.AllowUserToResizeRows = false;
-            dt_grid.RowHeadersWidthSizeMode =
-                DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dt_grid.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dt_grid.DefaultCellStyle.SelectionForeColor = Color.Black;
             dt_grid.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty;
-            // Set the background color for all rows and for alternating rows. 
-            // The value for alternating rows overrides the value for all rows. 
             dt_grid.RowsDefaultCellStyle.BackColor = Color.White;
             dt_grid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            // Set the row and column header styles.
             dt_grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dt_grid.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
             dt_grid.RowHeadersDefaultCellStyle.BackColor = Color.Black;
-            dt_grid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dt_grid.DefaultCellStyle.Font = new Font("Tahoma", 8);
-            dt_grid.DefaultCellStyle.ForeColor = Color.White;
-            dt_grid.Columns[0].Width = 10;
+
+            dt_grid.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 12, FontStyle.Bold);
+            dt_grid.DefaultCellStyle.Font = new Font("Calibri", 14);
+
+            for (int i = 0; i < dt_grid.Columns.Count - 1; i++)
+            {
+                dt_grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+
+            dt_grid.Columns[dt_grid.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dt_grid.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dt_grid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -105,27 +107,54 @@ namespace Ewats_App.Page
             dt_grid2.Columns[4].Name = "Total Belanja";
             dt_grid2.Columns[5].Name = "Cashier by";
 
+            dt_grid2.Columns[0].HeaderText = "X";
+            dt_grid2.Columns[1].HeaderText = "ID TRX";
+            dt_grid2.Columns[2].HeaderText = "DATETIME";
+            dt_grid2.Columns[3].HeaderText = "NAMA TRANSAKSI";
+            dt_grid2.Columns[4].HeaderText = "TOTAL";
+            dt_grid2.Columns[5].HeaderText = "KASIR";
+
             dt_grid2.RowHeadersVisible = false;
             dt_grid2.ColumnHeadersVisible = true;
-            DataGridViewColumn column1 = dt_grid2.Columns[0];
-            DataGridViewColumn column2 = dt_grid2.Columns[1];
-            DataGridViewColumn column3 = dt_grid2.Columns[2];
-            DataGridViewColumn column4 = dt_grid2.Columns[3];
-            DataGridViewColumn column5 = dt_grid2.Columns[4];
-            DataGridViewColumn column6 = dt_grid2.Columns[5];
 
             // Initialize basic DataGridView properties.
-            dt_grid2.Dock = DockStyle.None;
-            
-            dt_grid2.BorderStyle = BorderStyle.None;
-            dt_grid2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dt_grid2.ScrollBars = ScrollBars.Both;
-            
-            dt_grid2.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid2.Dock = DockStyle.Fill;
+            dt_grid2.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dt_grid2.BorderStyle = BorderStyle.Fixed3D;
+            // Set property values appropriate for read-only display and 
+            // limited interactivity. 
+            dt_grid2.AllowUserToAddRows = false;
+            dt_grid2.AllowUserToDeleteRows = false;
+            dt_grid2.AllowUserToOrderColumns = true;
+            dt_grid2.ReadOnly = true;
+            dt_grid2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dt_grid2.MultiSelect = false;
+            dt_grid2.AllowUserToResizeColumns = false;
+            dt_grid2.AllowUserToResizeRows = false;
+            dt_grid2.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+            dt_grid2.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dt_grid2.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty;
+            dt_grid2.RowsDefaultCellStyle.BackColor = Color.White;
+            dt_grid2.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            dt_grid2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dt_grid2.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dt_grid2.RowHeadersDefaultCellStyle.BackColor = Color.Black;
+
+            dt_grid2.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 12, FontStyle.Bold);
+            dt_grid2.DefaultCellStyle.Font = new Font("Calibri", 16);
+
+            for (int i = 0; i < dt_grid2.Columns.Count - 1; i++)
+            {
+                dt_grid2.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dt_grid2.Columns[dt_grid2.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dt_grid2.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dt_grid2.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid2.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid2.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dt_grid2.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dt_grid2.DefaultCellStyle.Font = new Font("Tahoma", 9);
-            dt_grid2.DefaultCellStyle.ForeColor = Color.Black;
-            dt_grid2.Columns[0].Width = 40;
+            dt_grid2.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void btnClosing_Click(object sender, EventArgs e)
@@ -332,5 +361,29 @@ namespace Ewats_App.Page
 
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtAllTiket_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dt_grid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

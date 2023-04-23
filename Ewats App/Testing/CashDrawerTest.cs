@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.PointOfService;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Drawing.Printing;

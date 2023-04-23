@@ -193,12 +193,16 @@ namespace Ewats_App.Page
                                         }
                                         PanelHitung.Visible = true;
                                         lblTotalBayar.Text = string.Format("{0:n0}", (sumAll - RegisCashPayment.Cashback));
-                                        PanelReader.Enabled = false;
-                                        panelCardType.Enabled = false;
+                                        
                                         panelAsuransi.Enabled = false;
                                         PanelJaminan.Enabled = false;
-                                        PanelAdditional.Enabled = false;
+                                        //PanelAdditional.Enabled = false;
                                         panel2.Enabled = false;
+                                        btnTopup.Enabled = false;
+                                        btnCashback.Enabled = false;
+                                        btnReadCard.Enabled = false;
+                                        btnClearDataCard.Enabled = false;
+                                        btnGetTicket.Enabled = false;
 
                                         RegisCashPayment.Asuransi = Hitung.Asuransi;
                                         RegisCashPayment.Card = Hitung.Card;
@@ -337,12 +341,16 @@ namespace Ewats_App.Page
                                     }
                                     PanelHitung.Visible = true;
                                     lblTotalBayar.Text = string.Format("{0:n0}", (sumAll - RegisCashPayment.Cashback));
-                                    PanelReader.Enabled = false;
-                                    panelCardType.Enabled = false;
+                                    
                                     panelAsuransi.Enabled = false;
                                     PanelJaminan.Enabled = false;
-                                    PanelAdditional.Enabled = false;
+                                    //PanelAdditional.Enabled = false;
                                     panel2.Enabled = false;
+                                    btnTopup.Enabled = false;
+                                    btnCashback.Enabled = false;
+                                    btnReadCard.Enabled = false;
+                                    btnClearDataCard.Enabled = false;
+                                    btnGetTicket.Enabled = false;
 
                                     RegisCashPayment.Asuransi = Hitung.Asuransi;
                                     RegisCashPayment.Card = Hitung.Card;
@@ -381,7 +389,6 @@ namespace Ewats_App.Page
                     TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Ticket WeekEnd \t: " + string.Format("{0:n0}", Card.TicketWeekEnd);
                     TxtBacaKartu.Text = TxtBacaKartu.Text + "\n SaldoJaminan \t: Rp " + string.Format("{0:n0}", Card.SaldoJaminan);
                 }
-
             }
             else
             {
@@ -584,6 +591,7 @@ namespace Ewats_App.Page
                                 Function.VFDPort.send("Saldo Kartu Anda :", f.ConvertToRupiah(Card.SaldoEmoney), Function.VFDPort.sp.PortName);
                             }
                         }
+                        btnClearDataCard.Visible = false;
                     }
                     else
                     {
@@ -592,6 +600,8 @@ namespace Ewats_App.Page
                         TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Account Number : " + Card.IdCard;
                         TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Code ID \t: " + f.ConvertDecimal(Card.CodeId).ToString();
                         TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Account telah Expired";
+                        btnClearDataCard.Visible = true;
+
                     }
                 }
                 else
@@ -599,11 +609,12 @@ namespace Ewats_App.Page
                     TxtBacaKartu.Text = "ACCOUNT DETAIL";
                     TxtBacaKartu.Text = TxtBacaKartu.Text + "\n================";
                     TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Account Number : " + Card.IdCard;
-                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Code ID \t: "+ f.ConvertDecimal(Card.CodeId).ToString();
-                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Saldo Emoney \t: Rp " + string.Format("{0:n0}", Card.SaldoEmoney);
-                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Ticket WeekDay \t: " + string.Format("{0:n0}", Card.TicketWeekDay);
-                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Ticket WeekEnd \t: " + string.Format("{0:n0}", Card.TicketWeekEnd);
-                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n SaldoJaminan \t: Rp " + string.Format("{0:n0}", Card.SaldoJaminan);
+                    TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Kartu Baru";
+                    //TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Code ID \t: "+ f.ConvertDecimal(Card.CodeId).ToString();
+                    //TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Saldo Emoney \t: Rp " + string.Format("{0:n0}", Card.SaldoEmoney);
+                    //TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Ticket WeekDay \t: " + string.Format("{0:n0}", Card.TicketWeekDay);
+                    //TxtBacaKartu.Text = TxtBacaKartu.Text + "\n Ticket WeekEnd \t: " + string.Format("{0:n0}", Card.TicketWeekEnd);
+                    //TxtBacaKartu.Text = TxtBacaKartu.Text + "\n SaldoJaminan \t: Rp " + string.Format("{0:n0}", Card.SaldoJaminan);
                 }
             }
             else
@@ -712,14 +723,18 @@ namespace Ewats_App.Page
         private void button25_Click(object sender, EventArgs e)
         {
             PanelHitung.Visible = false;
-            PanelReader.Enabled = true;
-            panelCardType.Enabled = true;
+            
             panelAsuransi.Enabled = true;
             PanelJaminan.Enabled = true;
-            PanelAdditional.Enabled = true;
+            //PanelAdditional.Enabled = true;
             panel2.Enabled = true;
             PanelEmoney.Visible = false;
-            
+            btnTopup.Enabled = true;
+            btnCashback.Enabled = true;
+            btnReadCard.Enabled = true;
+
+            btnClearDataCard.Enabled = true;
+            btnGetTicket.Enabled = true;
         }
         private void CbUseEmoney_CheckedChanged(object sender, EventArgs e)
         {
@@ -1116,23 +1131,25 @@ namespace Ewats_App.Page
             dt_grid.Columns[9].Name = "Total Diskon";
             dt_grid.Columns[10].Name = "TotalAfterDiskon";
 
+            dt_grid.Columns[0].HeaderText = "X";
+            dt_grid.Columns[1].HeaderText = "ID";
+            dt_grid.Columns[2].HeaderText = "NAMA TIKET";
+            dt_grid.Columns[3].HeaderText = "HARGA";
+            dt_grid.Columns[4].HeaderText = "JUMLAH";
+            dt_grid.Columns[5].HeaderText = "TOTAL";
+            dt_grid.Columns[6].HeaderText = "KODE DISKON";
+            dt_grid.Columns[7].HeaderText = "NAMA DISKON";
+            dt_grid.Columns[8].HeaderText = "DISKON";
+            dt_grid.Columns[9].HeaderText = "TOTAL DISKON";
+            dt_grid.Columns[10].HeaderText = "TOTAL SETELAH DISKON";
+            
             dt_grid.RowHeadersVisible = false;
             dt_grid.ColumnHeadersVisible = true;
-            DataGridViewColumn column1 = dt_grid.Columns[0];
-            DataGridViewColumn column2 = dt_grid.Columns[1];
-            DataGridViewColumn column3 = dt_grid.Columns[2];
-            DataGridViewColumn column4 = dt_grid.Columns[3];
-            DataGridViewColumn column5 = dt_grid.Columns[4];
-            DataGridViewColumn column6 = dt_grid.Columns[5];
-            DataGridViewColumn column7 = dt_grid.Columns[6];
-            DataGridViewColumn column8 = dt_grid.Columns[7];
-            DataGridViewColumn column9 = dt_grid.Columns[8];
-            DataGridViewColumn column10 = dt_grid.Columns[9];
-            DataGridViewColumn column11 = dt_grid.Columns[10];
 
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
-            
+            dt_grid.Dock = DockStyle.Fill;
+            dt_grid.BackgroundColor = SystemColors.GradientInactiveCaption;
+            dt_grid.BorderStyle = BorderStyle.Fixed3D;
             // Set property values appropriate for read-only display and 
             // limited interactivity. 
             dt_grid.AllowUserToAddRows = false;
@@ -1140,39 +1157,54 @@ namespace Ewats_App.Page
             dt_grid.AllowUserToOrderColumns = true;
             dt_grid.ReadOnly = true;
             dt_grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dt_grid.MultiSelect = true;
-            dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dt_grid.AllowUserToResizeColumns = true;
-            dt_grid.ColumnHeadersHeightSizeMode =
-                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dt_grid.MultiSelect = false;
+            dt_grid.AllowUserToResizeColumns = false;
             dt_grid.AllowUserToResizeRows = false;
-            dt_grid.RowHeadersWidthSizeMode =
-                DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            // Set the selection background color for all the cells.
             dt_grid.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dt_grid.DefaultCellStyle.SelectionForeColor = Color.Black;
-            // Set RowHeadersDefaultCellStyle.SelectionBackColor so that its default
-            // value won't override DataGridView.DefaultCellStyle.SelectionBackColor.
             dt_grid.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty;
-            // Set the background color for all rows and for alternating rows. 
-            // The value for alternating rows overrides the value for all rows. 
             dt_grid.RowsDefaultCellStyle.BackColor = Color.White;
             dt_grid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            // Set the row and column header styles.
             dt_grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dt_grid.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
+            dt_grid.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 12, FontStyle.Bold); 
+            
             dt_grid.RowHeadersDefaultCellStyle.BackColor = Color.Black;
-            dt_grid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dt_grid.DefaultCellStyle.Font = new Font("Tahoma", 8);
-            dt_grid.Columns[0].Width = 10;
-            column2.Width = 0;
+
+
+            dt_grid.DefaultCellStyle.Font = new Font("Calibri", 14);
+
+            for (int i = 0; i < dt_grid.Columns.Count - 1; i++)
+            {
+                dt_grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dt_grid.Columns[dt_grid.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            
+            dt_grid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dt_grid.Columns[2].Width = 300;
+
+            dt_grid.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dt_grid.Columns[10].Width = 100;
+
+            dt_grid.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dt_grid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dt_grid.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dt_grid.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dt_grid.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dt_grid.Columns[9].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dt_grid.Columns[10].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
         }
         public void PanelControl(bool enable)
         {
-            panelCardType.Enabled = enable;
+            //panelCardType.Enabled = enable;
             panelAsuransi.Enabled = enable;
-            PanelAdditional.Enabled = enable;
-            PanelReader.Enabled = enable;
+            //PanelAdditional.Enabled = enable;
+            //PanelReader.Enabled = enable;
             PanelJaminan.Enabled = enable;
             panel2.Enabled = enable;
         }
@@ -1410,7 +1442,7 @@ namespace Ewats_App.Page
             dt_grid2.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
             dt_grid2.RowHeadersDefaultCellStyle.BackColor = Color.Black;
             dt_grid2.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dt_grid2.DefaultCellStyle.Font = new Font("Tahoma", 10);
+            dt_grid2.DefaultCellStyle.Font = new Font("calibri", 12);
             dt_grid2.Columns[0].Width = 10;
             dt_grid2.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
         }
@@ -1522,6 +1554,35 @@ namespace Ewats_App.Page
                     Function.VFDPort.send("Total Pembayaran :", f.ConvertToRupiah(f.ConvertDecimal(lblTotalBayar.Text)), Function.VFDPort.sp.PortName);
                 }
             }    
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            Form fc = Application.OpenForms["ListEwallet"];
+            if (fc != null)
+            {
+                fc.Show();
+                fc.BringToFront();
+            }
+            else
+            {
+                ListEwallet frm = new ListEwallet();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.BringToFront();
+                frm.MaximizeBox = false;
+                frm.MinimizeBox = false;
+                frm.Show();
+            }
         }
 
         private void ClearBuffers()

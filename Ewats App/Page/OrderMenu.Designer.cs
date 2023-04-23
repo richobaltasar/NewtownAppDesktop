@@ -65,6 +65,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -225,7 +228,9 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.DimGray;
+            this.panel10.BackColor = System.Drawing.Color.Snow;
+            this.panel10.Controls.Add(this.panel6);
+            this.panel10.Controls.Add(this.panel4);
             this.panel10.Controls.Add(this.txtControl);
             this.panel10.Controls.Add(this.button15);
             this.panel10.Controls.Add(this.button16);
@@ -253,7 +258,7 @@
             this.txtControl.AutoSize = true;
             this.txtControl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtControl.Location = new System.Drawing.Point(13, 1);
+            this.txtControl.Location = new System.Drawing.Point(17, 14);
             this.txtControl.Name = "txtControl";
             this.txtControl.Size = new System.Drawing.Size(11, 14);
             this.txtControl.TabIndex = 32;
@@ -262,7 +267,7 @@
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.Gray;
+            this.button15.BackColor = System.Drawing.Color.Red;
             this.button15.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -562,7 +567,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(40, 25);
             this.label12.Name = "label12";
@@ -580,12 +585,43 @@
             this.panel3.Size = new System.Drawing.Size(389, 5);
             this.panel3.TabIndex = 69;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(298, 5);
+            this.panel4.TabIndex = 70;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Location = new System.Drawing.Point(0, 369);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(389, 5);
+            this.panel5.TabIndex = 72;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Location = new System.Drawing.Point(0, 369);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(298, 5);
+            this.panel6.TabIndex = 73;
+            // 
             // OrderMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(687, 374);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel3);
@@ -649,5 +685,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

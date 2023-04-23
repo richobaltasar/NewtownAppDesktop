@@ -34,7 +34,9 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.txtUangCashBox = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -90,8 +92,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtEDCTopup = new System.Windows.Forms.TextBox();
@@ -114,17 +114,23 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.DimGray;
+            this.panel10.BackColor = System.Drawing.Color.Snow;
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.panel8);
             this.panel10.Controls.Add(this.txtControl);
             this.panel10.Controls.Add(this.button15);
             this.panel10.Controls.Add(this.button16);
@@ -147,9 +153,9 @@
             this.panel10.Controls.Add(this.button2);
             this.panel10.Controls.Add(this.button1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(12, 0);
+            this.panel10.Location = new System.Drawing.Point(543, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(827, 710);
+            this.panel10.Size = new System.Drawing.Size(296, 739);
             this.panel10.TabIndex = 35;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -229,6 +235,17 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Ewats_App.Properties.Resources.Login1;
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 60;
+            this.pictureBox2.TabStop = false;
+            // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.MediumOrchid;
@@ -244,6 +261,19 @@
             this.button13.Text = "Submit";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(44, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 29);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Penutupan Kasir";
             // 
             // button8
             // 
@@ -294,7 +324,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label15.Location = new System.Drawing.Point(21, 380);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(260, 19);
@@ -447,6 +477,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.txtTicketPayEmoney);
             this.panel1.Controls.Add(this.label37);
             this.panel1.Controls.Add(this.label38);
@@ -478,14 +509,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(427, 265);
             this.panel1.TabIndex = 38;
-            this.panel1.Visible = false;
             // 
             // txtTicketPayEmoney
             // 
             this.txtTicketPayEmoney.BackColor = System.Drawing.Color.Gray;
             this.txtTicketPayEmoney.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTicketPayEmoney.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTicketPayEmoney.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTicketPayEmoney.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtTicketPayEmoney.Location = new System.Drawing.Point(172, 195);
             this.txtTicketPayEmoney.Name = "txtTicketPayEmoney";
             this.txtTicketPayEmoney.Size = new System.Drawing.Size(249, 24);
@@ -497,7 +527,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label37.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label37.Location = new System.Drawing.Point(154, 194);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(13, 19);
@@ -508,7 +538,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label38.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label38.Location = new System.Drawing.Point(8, 194);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(144, 19);
@@ -520,7 +550,7 @@
             this.TxtFBEmoney.BackColor = System.Drawing.Color.Gray;
             this.TxtFBEmoney.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtFBEmoney.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFBEmoney.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TxtFBEmoney.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtFBEmoney.Location = new System.Drawing.Point(172, 140);
             this.TxtFBEmoney.Name = "TxtFBEmoney";
             this.TxtFBEmoney.Size = new System.Drawing.Size(249, 24);
@@ -532,7 +562,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label35.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label35.Location = new System.Drawing.Point(154, 139);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(13, 19);
@@ -543,7 +573,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label36.Location = new System.Drawing.Point(8, 139);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(102, 19);
@@ -555,7 +585,7 @@
             this.txtTotalTransaksiEmoney.BackColor = System.Drawing.Color.Gray;
             this.txtTotalTransaksiEmoney.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalTransaksiEmoney.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalTransaksiEmoney.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTotalTransaksiEmoney.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtTotalTransaksiEmoney.Location = new System.Drawing.Point(172, 233);
             this.txtTotalTransaksiEmoney.Name = "txtTotalTransaksiEmoney";
             this.txtTotalTransaksiEmoney.Size = new System.Drawing.Size(249, 24);
@@ -567,7 +597,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(8, 118);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 19);
@@ -578,7 +608,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label22.Location = new System.Drawing.Point(156, 234);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(13, 19);
@@ -590,7 +620,7 @@
             this.txtTotalTrx.BackColor = System.Drawing.Color.Gray;
             this.txtTotalTrx.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalTrx.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalTrx.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.txtTotalTrx.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtTotalTrx.Location = new System.Drawing.Point(172, 96);
             this.txtTotalTrx.Name = "txtTotalTrx";
             this.txtTotalTrx.Size = new System.Drawing.Size(249, 24);
@@ -602,7 +632,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label23.Location = new System.Drawing.Point(9, 234);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 19);
@@ -613,7 +643,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(154, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 20);
@@ -632,7 +662,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(7, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 19);
@@ -644,7 +674,7 @@
             this.TxtRegisTotal.BackColor = System.Drawing.Color.Gray;
             this.TxtRegisTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtRegisTotal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRegisTotal.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TxtRegisTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtRegisTotal.Location = new System.Drawing.Point(172, 6);
             this.TxtRegisTotal.Name = "TxtRegisTotal";
             this.TxtRegisTotal.Size = new System.Drawing.Size(249, 24);
@@ -656,7 +686,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(153, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
@@ -667,7 +697,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(7, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 19);
@@ -679,7 +709,7 @@
             this.TxtTotalRefund.BackColor = System.Drawing.Color.Gray;
             this.TxtTotalRefund.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTotalRefund.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalRefund.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TxtTotalRefund.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtTotalRefund.Location = new System.Drawing.Point(172, 167);
             this.TxtTotalRefund.Name = "TxtTotalRefund";
             this.TxtTotalRefund.Size = new System.Drawing.Size(249, 24);
@@ -692,7 +722,7 @@
             this.TxtFoodCourtCash.BackColor = System.Drawing.Color.Gray;
             this.TxtFoodCourtCash.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtFoodCourtCash.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFoodCourtCash.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TxtFoodCourtCash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtFoodCourtCash.Location = new System.Drawing.Point(172, 60);
             this.TxtFoodCourtCash.Name = "TxtFoodCourtCash";
             this.TxtFoodCourtCash.Size = new System.Drawing.Size(249, 24);
@@ -705,7 +735,7 @@
             this.TxtTotalTopup.BackColor = System.Drawing.Color.Gray;
             this.TxtTotalTopup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTotalTopup.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalTopup.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TxtTotalTopup.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtTotalTopup.Location = new System.Drawing.Point(172, 33);
             this.TxtTotalTopup.Name = "TxtTotalTopup";
             this.TxtTotalTopup.Size = new System.Drawing.Size(249, 24);
@@ -717,7 +747,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(154, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 19);
@@ -728,7 +758,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(154, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 19);
@@ -739,7 +769,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(153, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 20);
@@ -750,7 +780,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(8, 166);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 19);
@@ -761,7 +791,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(8, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 19);
@@ -772,7 +802,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label28.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label28.Location = new System.Drawing.Point(7, 32);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(84, 19);
@@ -789,6 +819,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.Controls.Add(this.txtDanaModal);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label11);
@@ -805,7 +836,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(427, 133);
             this.panel3.TabIndex = 39;
-            this.panel3.Visible = false;
             // 
             // txtDanaModal
             // 
@@ -951,52 +981,27 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label13.Location = new System.Drawing.Point(23, 290);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(14, 290);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 19);
             this.label13.TabIndex = 43;
             this.label13.Text = "Cash Flow";
-            this.label13.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Ewats_App.Properties.Resources.Login1;
-            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 60;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(44, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 29);
-            this.label12.TabIndex = 59;
-            this.label12.Text = "Penutupan Kasir";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label24.Location = new System.Drawing.Point(19, 449);
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label24.Location = new System.Drawing.Point(14, 449);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(117, 19);
             this.label24.TabIndex = 61;
             this.label24.Text = "EDC Transaction";
-            this.label24.Visible = false;
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.Controls.Add(this.txtEDCTopup);
             this.panel5.Controls.Add(this.label41);
             this.panel5.Controls.Add(this.label42);
@@ -1013,7 +1018,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(427, 128);
             this.panel5.TabIndex = 62;
-            this.panel5.Visible = false;
             // 
             // txtEDCTopup
             // 
@@ -1157,6 +1161,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
             this.panel6.Controls.Add(this.txtTotalAccountTrx);
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.label29);
@@ -1167,7 +1172,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(427, 69);
             this.panel6.TabIndex = 64;
-            this.panel6.Visible = false;
             // 
             // txtTotalAccountTrx
             // 
@@ -1243,20 +1247,57 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label34.Location = new System.Drawing.Point(24, 602);
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label34.Location = new System.Drawing.Point(14, 602);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(147, 19);
             this.label34.TabIndex = 63;
             this.label34.Text = "eMoney Transaction";
-            this.label34.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(543, 10);
+            this.panel7.TabIndex = 65;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(296, 10);
+            this.panel8.TabIndex = 66;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 729);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(543, 10);
+            this.panel9.TabIndex = 66;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 729);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(296, 10);
+            this.panel11.TabIndex = 67;
             // 
             // ClosingCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(839, 710);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(839, 739);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label34);
@@ -1272,11 +1313,11 @@
             this.Load += new System.EventHandler(this.ClosingCashier_Load);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1374,5 +1415,9 @@
         private System.Windows.Forms.TextBox txtEDCRegis;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel9;
     }
 }

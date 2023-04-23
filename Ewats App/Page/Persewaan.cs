@@ -37,7 +37,7 @@ namespace Ewats_App.Page
             //    item.Value = d.Id;
             //    cbTenant.Items.Add(item);
             //}
-            GetMenu("11");
+            GetMenu("PERSEWAAN");
         }
 
         private void cbTenant_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Ewats_App.Page
 
         public void GetMenu(string Tenant)
         {
-            GetMenu:
+            //GetMenu:
             var dataMenu = f.GetBarang(Tenant);
             ImageList il = new ImageList();
             int count = 0;
@@ -70,11 +70,12 @@ namespace Ewats_App.Page
                 }
                 catch (Exception ex)
                 {
-                    var res3 = MessageBox.Show("GetMenu Gagal : "+ex.Message, "Printing Fail", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                    if (res3 == DialogResult.Retry)
-                    {
-                        goto GetMenu;
-                    }
+                    Console.WriteLine(ex.Message);  
+                    //var res3 = MessageBox.Show("GetMenu Gagal : "+ex.Message, "Printing Fail", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    //if (res3 == DialogResult.Retry)
+                    //{
+                    //    goto GetMenu;
+                    //}
                 }
             }
             ListMenu.LargeImageList = il;

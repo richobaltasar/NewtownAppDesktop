@@ -11,13 +11,11 @@ using Ewats_App.Model;
 using Ewats_App.Function;
 using System.IO.Ports;
 using System.Threading;
-using Microsoft.PointOfService;
 
 namespace Ewats_App
 {
     public partial class VFDConfig : Form
     {
-        PosExplorer lineDisplayDevice = new PosExplorer();
         GlobalFunc f = new GlobalFunc();
         SerialPort sp = new SerialPort();
         public VFDConfig()

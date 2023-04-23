@@ -64,6 +64,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,6 +168,8 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.DimGray;
+            this.panel10.Controls.Add(this.panel6);
+            this.panel10.Controls.Add(this.panel4);
             this.panel10.Controls.Add(this.txtControl);
             this.panel10.Controls.Add(this.button15);
             this.panel10.Controls.Add(this.button16);
@@ -571,12 +577,54 @@
             this.label12.TabIndex = 72;
             this.label12.Text = "ORDER SEWA";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(435, 5);
+            this.panel3.TabIndex = 74;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(298, 5);
+            this.panel4.TabIndex = 70;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Location = new System.Drawing.Point(0, 356);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(435, 5);
+            this.panel5.TabIndex = 75;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Location = new System.Drawing.Point(0, 356);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(298, 5);
+            this.panel6.TabIndex = 76;
+            // 
             // OrderSewa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(733, 361);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
@@ -636,5 +684,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
     }
 }

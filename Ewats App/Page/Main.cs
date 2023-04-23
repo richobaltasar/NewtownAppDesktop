@@ -299,6 +299,16 @@ namespace Ewats_App.Page
         {
             f.PageControl("ChangePassword");
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

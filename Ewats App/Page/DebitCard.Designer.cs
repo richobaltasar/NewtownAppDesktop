@@ -70,10 +70,12 @@
             this.txtTotalBelanja = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtBacaKartu = new System.Windows.Forms.RichTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button9
@@ -375,7 +377,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(515, 184);
+            this.panel1.Location = new System.Drawing.Point(505, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 474);
             this.panel1.TabIndex = 55;
@@ -624,7 +626,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Ewats_App.Properties.Resources.Debit;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 184);
+            this.pictureBox2.Location = new System.Drawing.Point(1, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(505, 471);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -635,12 +637,22 @@
             // 
             this.TxtBacaKartu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBacaKartu.Enabled = false;
-            this.TxtBacaKartu.Location = new System.Drawing.Point(1193, 138);
+            this.TxtBacaKartu.Location = new System.Drawing.Point(1190, 3);
             this.TxtBacaKartu.Name = "TxtBacaKartu";
-            this.TxtBacaKartu.Size = new System.Drawing.Size(56, 40);
+            this.TxtBacaKartu.Size = new System.Drawing.Size(56, 31);
             this.TxtBacaKartu.TabIndex = 57;
             this.TxtBacaKartu.Text = "";
             this.TxtBacaKartu.Visible = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Location = new System.Drawing.Point(12, 37);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1237, 487);
+            this.panel4.TabIndex = 58;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // DebitCard
             // 
@@ -648,9 +660,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1300, 696);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.TxtBacaKartu);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DebitCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -662,6 +673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -710,5 +722,6 @@
         public System.Windows.Forms.TextBox txtTotalDebit;
         public System.Windows.Forms.TextBox txtNamaBank;
         private System.Windows.Forms.RichTextBox TxtBacaKartu;
+        private System.Windows.Forms.Panel panel4;
     }
 }

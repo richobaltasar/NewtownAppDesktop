@@ -19,7 +19,7 @@ namespace Ewats_App.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,16 @@ namespace Ewats_App.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _256_256_5fbc60a4335d01cd9c35dcf8fae02410 {
+            get {
+                object obj = ResourceManager.GetObject("256-256-5fbc60a4335d01cd9c35dcf8fae02410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -263,6 +273,26 @@ namespace Ewats_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Payment {
+            get {
+                object obj = ResourceManager.GetObject("Payment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paymentmethod {
+            get {
+                object obj = ResourceManager.GetObject("paymentmethod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Registrasi {
             get {
                 object obj = ResourceManager.GetObject("Registrasi", resourceCulture);
@@ -306,6 +336,16 @@ namespace Ewats_App.Properties {
         internal static System.Drawing.Bitmap ticket_512 {
             get {
                 object obj = ResourceManager.GetObject("ticket-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ticket_5121 {
+            get {
+                object obj = ResourceManager.GetObject("ticket-5121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

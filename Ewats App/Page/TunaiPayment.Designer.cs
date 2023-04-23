@@ -44,6 +44,7 @@
             this.txtControl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.TxtBacaKartu = new System.Windows.Forms.RichTextBox();
             this.button21 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -59,12 +60,13 @@
             this.button18 = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtBacaKartu = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -193,7 +195,7 @@
             this.panel1.Controls.Add(this.TxtUangTerima);
             this.panel1.Controls.Add(this.txtTotalBelanja);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(529, 203);
+            this.panel1.Location = new System.Drawing.Point(462, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 378);
             this.panel1.TabIndex = 1;
@@ -239,9 +241,9 @@
             this.panel10.Controls.Add(this.button18);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Controls.Add(this.label2);
-            this.panel10.Location = new System.Drawing.Point(915, 203);
+            this.panel10.Location = new System.Drawing.Point(851, 1);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(274, 378);
+            this.panel10.Size = new System.Drawing.Size(274, 375);
             this.panel10.TabIndex = 40;
             // 
             // txtControl
@@ -282,6 +284,17 @@
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // TxtBacaKartu
+            // 
+            this.TxtBacaKartu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBacaKartu.Enabled = false;
+            this.TxtBacaKartu.Location = new System.Drawing.Point(17, 341);
+            this.TxtBacaKartu.Name = "TxtBacaKartu";
+            this.TxtBacaKartu.Size = new System.Drawing.Size(236, 22);
+            this.TxtBacaKartu.TabIndex = 41;
+            this.TxtBacaKartu.Text = "";
+            this.TxtBacaKartu.Visible = false;
             // 
             // button21
             // 
@@ -487,26 +500,26 @@
             this.label2.Text = "Keyboard";
             this.label2.Visible = false;
             // 
-            // TxtBacaKartu
-            // 
-            this.TxtBacaKartu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBacaKartu.Enabled = false;
-            this.TxtBacaKartu.Location = new System.Drawing.Point(17, 341);
-            this.TxtBacaKartu.Name = "TxtBacaKartu";
-            this.TxtBacaKartu.Size = new System.Drawing.Size(236, 22);
-            this.TxtBacaKartu.TabIndex = 41;
-            this.TxtBacaKartu.Text = "";
-            this.TxtBacaKartu.Visible = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Ewats_App.Properties.Resources.cash;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 203);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(455, 378);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Location = new System.Drawing.Point(74, 32);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1115, 389);
+            this.panel3.TabIndex = 41;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // TunaiPayment
             // 
@@ -516,9 +529,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1370, 720);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TunaiPayment";
@@ -531,6 +542,7 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -569,5 +581,6 @@
         private System.Windows.Forms.RichTextBox TxtBacaKartu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -1052,8 +1052,8 @@ namespace Ewats_App.Page
             DataGridViewColumn column6 = dt_grid.Columns[5];
 
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
-            dt_grid.BackgroundColor = SystemColors.GradientInactiveCaption;
+            //dt_grid.Dock = DockStyle.None;
+            //dt_grid.BackgroundColor = SystemColors.GradientInactiveCaption;
             dt_grid.BorderStyle = BorderStyle.Fixed3D;
             // Set property values appropriate for read-only display and 
             // limited interactivity. 

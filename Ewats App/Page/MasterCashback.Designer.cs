@@ -120,9 +120,9 @@
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(42, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 29);
+            this.label12.Size = new System.Drawing.Size(106, 29);
             this.label12.TabIndex = 61;
-            this.label12.Text = "Penutupan Kasir";
+            this.label12.Text = "Cashback";
             // 
             // MasterCashback
             // 

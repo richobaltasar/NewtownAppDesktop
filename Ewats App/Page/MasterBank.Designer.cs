@@ -135,6 +135,7 @@
             this.LblPage.Size = new System.Drawing.Size(100, 29);
             this.LblPage.TabIndex = 70;
             this.LblPage.Text = "List Bank";
+            this.LblPage.Visible = false;
             // 
             // MasterBank
             // 

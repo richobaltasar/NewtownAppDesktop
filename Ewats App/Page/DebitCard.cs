@@ -1060,6 +1060,15 @@ namespace Ewats_App.Page
             }
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            panel4.Location = new Point(
+    this.ClientSize.Width / 2 - panel4.Size.Width / 2,
+    this.ClientSize.Height / 2 - panel4.Size.Height / 2);
+            panel4.Anchor = AnchorStyles.None;
+        }
+
         public int SendAPDU()
         {
             int indx;

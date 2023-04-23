@@ -755,7 +755,7 @@
             this.dt_grid.Location = new System.Drawing.Point(567, 79);
             this.dt_grid.Margin = new System.Windows.Forms.Padding(4);
             this.dt_grid.Name = "dt_grid";
-            this.dt_grid.Size = new System.Drawing.Size(677, 595);
+            this.dt_grid.Size = new System.Drawing.Size(862, 595);
             this.dt_grid.TabIndex = 58;
             // 
             // button19
@@ -783,13 +783,14 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(805, 682);
+            this.button1.Location = new System.Drawing.Point(985, 682);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 63);
             this.button1.TabIndex = 60;
             this.button1.Text = "Request Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -800,7 +801,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(1041, 682);
+            this.button2.Location = new System.Drawing.Point(776, 682);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 63);
@@ -815,7 +816,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1260, 2);
+            this.panel1.Size = new System.Drawing.Size(1442, 2);
             this.panel1.TabIndex = 146;
             // 
             // pictureBox2
@@ -1128,7 +1129,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1260, 749);
+            this.ClientSize = new System.Drawing.Size(1442, 749);
             this.Controls.Add(this.PanelDebit);
             this.Controls.Add(this.panelCash);
             this.Controls.Add(this.panel1);

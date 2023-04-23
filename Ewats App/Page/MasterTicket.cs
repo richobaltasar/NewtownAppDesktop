@@ -41,7 +41,7 @@ namespace Ewats_App.Page
             DataGridViewColumn column3 = dt_grid.Columns[2];
 
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
+            dt_grid.Dock = DockStyle.Fill;
             dt_grid.BackgroundColor = SystemColors.GradientInactiveCaption;
             dt_grid.BorderStyle = BorderStyle.Fixed3D;
             // Set property values appropriate for read-only display and 
@@ -51,14 +51,14 @@ namespace Ewats_App.Page
             dt_grid.AllowUserToOrderColumns = true;
             dt_grid.ReadOnly = true;
             dt_grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dt_grid.MultiSelect = true;
-            dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dt_grid.AllowUserToResizeColumns = true;
-            dt_grid.ColumnHeadersHeightSizeMode =
-                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dt_grid.MultiSelect = false;
+            //dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            
+            dt_grid.AllowUserToResizeColumns = false;
             dt_grid.AllowUserToResizeRows = false;
-            dt_grid.RowHeadersWidthSizeMode =
-                DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+
+            //dt_grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //dt_grid.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing;
             // Set the selection background color for all the cells.
             dt_grid.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dt_grid.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -73,10 +73,26 @@ namespace Ewats_App.Page
             dt_grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dt_grid.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
             dt_grid.RowHeadersDefaultCellStyle.BackColor = Color.Black;
-            dt_grid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dt_grid.DefaultCellStyle.Font = new Font("Calibri", 12);
-            dt_grid.Columns[0].Width = 20;
+            
+            //dt_grid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            dt_grid.DefaultCellStyle.Font = new Font("Calibri", 12);
+            //dt_grid.Columns[0].Width = 20;
+            for (int i = 0; i < dt_grid.Columns.Count - 1; i++)
+            {
+                dt_grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dt_grid.Columns[dt_grid.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            //for (int i = 0; i < dt_grid.Columns.Count; i++)
+            //{
+            //    int colw = dt_grid.Columns[i].Width;
+            //    dt_grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            //    dt_grid.Columns[i].Width = colw;
+            //}
+            dt_grid.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dt_grid.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         public void input_keyPad(string key, string Object)
@@ -287,6 +303,11 @@ namespace Ewats_App.Page
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -31,6 +31,7 @@ namespace Ewats_App.Page
                     {
                         btnTopup.Text = "Topup : Rp " + string.Format("{0:n0}", button2.Text);
                     }
+
                     this.Close();
                 }
             }

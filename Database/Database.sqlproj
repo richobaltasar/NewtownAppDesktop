@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9f88f953-4b8e-4d76-9b8c-ea8ca9703615}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\LogStokOpname.sql" />
+    <Build Include="dbo\Tables\LogTicketDetail.sql" />
+    <Build Include="dbo\Tables\LogTopupDetail.sql" />
+    <Build Include="dbo\Tables\UserData.sql" />
+    <Build Include="dbo\Tables\LogClosingV2.sql" />
+    <Build Include="dbo\Tables\DataAccount.sql" />
+    <Build Include="dbo\Tables\DataBank.sql" />
+    <Build Include="dbo\Tables\DataBarang.sql" />
+    <Build Include="dbo\Tables\DataCashback.sql" />
+    <Build Include="dbo\Tables\DataChasierBox.sql" />
+    <Build Include="dbo\Tables\DataDeposit.sql" />
+    <Build Include="dbo\Tables\DataParam.sql" />
+    <Build Include="dbo\Tables\DataPromo.sql" />
+    <Build Include="dbo\Tables\DataSuplier.sql" />
+    <Build Include="dbo\Tables\DataTenant.sql" />
+    <Build Include="dbo\Tables\DataTicket.sql" />
+    <Build Include="dbo\Tables\LogCashierTambahModal.sql" />
+    <Build Include="dbo\Tables\LogClosing.sql" />
+    <Build Include="dbo\Tables\LogDeposit.sql" />
+    <Build Include="dbo\Tables\LogEDCTransaksi.sql" />
+    <Build Include="dbo\Tables\LogEmoneyTrxAccount.sql" />
+    <Build Include="dbo\Tables\LogFoodcourtTransaksi.sql" />
+    <Build Include="dbo\Tables\LogItemsF_BTrx.sql" />
+    <Build Include="dbo\Tables\LogRefundDetail.sql" />
+    <Build Include="dbo\Tables\LogRegistrasiDetail.sql" />
+    <Build Include="dbo\Tables\LogSetoranDepositExpired.sql" />
+    <Build Include="dbo\Functions\Roman.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormUserMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogHistoryAccountTopup.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FUpdateStockMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLoginContent.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_GetDataCompro.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogItemsFBTrx.sql" />
+    <Build Include="dbo\Stored Procedures\WEBSP_GetLogClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogRegistrasiDetail.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_GetRegistrasiReportDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogStockOpname.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_GetRegistrasiReportDetailFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogStokOpname.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_GetTicketMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogTicketDetail.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_LoginProc.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogTopupDetail.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_SaveDataMenu.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetMingguanData.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_ChartRefundTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetMingguanHeader.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_ChartTenantSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetNamaKotaLaporan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_ChartTopupTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetNamaUser.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_ChartTransactionPerJenisTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetParamPrinter.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_ChartTransactionPerJenisTicket2.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetPrintKolomVisitor.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashChartProductSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetPromo.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashFoodCourtSalesPerTenant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanAsuramsiBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashHourlyAllTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanAsuramsiHarian.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashHourlyIncomeSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanAsuramsiPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashIncomeSalesDonut.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanAsuramsiTahunan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashRefundSalesDonut.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanFnBBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTopupSalesDonut.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanFnBHarian.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTotalFoodCourtSalesPerTenant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanFnBPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTotalIncomeSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanFnBTahunanCash.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTotalRefundSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanFnBTahunanEmoney.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTotalTicketSalesPerJenisTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanGelangJaminanBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_GetDashTotalTopupSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanGelangJaminanHarian.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_TransactionPerJenisTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanGelangJaminanPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\WebSPDash_TransactionPerJenisTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanGelangJaminanTahunan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTiketBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTiketTahunan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTopupBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTopupHarian.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTopupPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTopupTahunan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalA.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalABulanan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalAPay.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalAPayPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalAPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalATahunan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositAkunHarian.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositAkunHariSebelumnya.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositAkunPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositCreditHarian.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositUseHaria.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositUseHarian.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalDepositUsePeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalRefundBulanan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalRefundHarian.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalRefundPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetRekapanTotalRefundTahunan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetStockMonitoring.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetTDD.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetTenant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GETTICKETPRICE.sql" />
+    <Build Include="dbo\Stored Procedures\GetDashChartProductSales.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetTotalEmoneyTicket.sql" />
+    <Build Include="dbo\Stored Procedures\GetLogClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetTotalLogClosing.sql" />
+    <Build Include="dbo\Stored Procedures\GetLogHistoryAccountRegistrasi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_Login.sql" />
+    <Build Include="dbo\Stored Procedures\SaveDebitTransaksiTopup.sql" />
+    <Build Include="dbo\Stored Procedures\SP_LogRefundDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SaveTransaksiTopup.sql" />
+    <Build Include="dbo\Stored Procedures\SP_RekapanTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ApiUploadLogCashierTambahModal.sql" />
+    <Build Include="dbo\Stored Procedures\SP_RekapanTicketPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ApiUploadLogClosing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveChangePassword.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ApiUploadLogDeposit.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ApiUploadLogEDCTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveDataMenu.sql" />
+    <Build Include="dbo\Stored Procedures\SP_CheckClosingMerchant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveDataTambahModal.sql" />
+    <Build Include="dbo\Stored Procedures\SP_CheckClosingMerchant_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveDebitTransaksiRegistrasi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_CheckExpired.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveFoodCourtPayment.sql" />
+    <Build Include="dbo\Stored Procedures\SP_CheckNowWeekend.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveItemsFB.sql" />
+    <Build Include="dbo\Stored Procedures\SP_CheckOpenCashier.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveTicketKeranjang.sql" />
+    <Build Include="dbo\Stored Procedures\SP_Closing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveTransaksiRefund.sql" />
+    <Build Include="dbo\Stored Procedures\SP_Dashboard.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveTransaksiRegistrasi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_DELETE_ALL.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SaveUpdateStockOpname.sql" />
+    <Build Include="dbo\Stored Procedures\SP_FSaveTerimaClosing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SubmitSetorDepositExp.sql" />
+    <Build Include="dbo\Stored Procedures\SP_FSaveTolakClosing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogCashierTambahModal.sql" />
+    <Build Include="dbo\Stored Procedures\SP_FSubmitFormClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogClosing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GateProc.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogDeposit.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GedtIdTiket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogEDCTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GedtIdTrxF_B.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogEmoneyTrxAccount.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GenCodeID.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogFoodcourtTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetAsuransi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogItemsFBTrx.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetBarang.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogRefundDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetCashback.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogRegistrasiDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetCashierDanaModalHistory.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogSetoranDepositExpired.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetCategoryMenu.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogStokOpname.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetChasierCashbox.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogTicketDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetConnStringCloudDB.sql" />
+    <Build Include="dbo\Stored Procedures\SP_ULogTopupDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDanaModalLog.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UpdateAccountDataRead.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDash1.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogFoodcourtTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDashboard_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogItemsFBTrx.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDashTenantPerfomance_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogRefundDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDashTicketCount.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogRegistrasiDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDashTotalToup.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogSetoranDepositExpired.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataAllTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogStokOpname.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataBank.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogTicketDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataLogClosing.sql" />
+    <Build Include="dbo\Stored Procedures\SP_UploadLogTopupDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataProductMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_WebGetDepositoDetailTotal.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataPromo.sql" />
+    <Build Include="dbo\Stored Procedures\SP_WebGetFooterDepositoDetailTotal.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataStok.sql" />
+    <Build Include="dbo\Stored Procedures\Tool_SP_GetDashboard_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataSuplier.sql" />
+    <Build Include="dbo\Stored Procedures\Tool_SP_SaveClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataTenantMan.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_FBDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataTransaksiFoodCourtReprint.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_FBDetailFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataTransaksiRefund.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_FBSummary.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataTransaksiRegistrasi.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_FBSummaryFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataTransaksiTopup.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_GetRegistrasiReportSummaryFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataUser.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_GetTicketSalesReportDetailFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDataUserMan.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_RefundDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDateTime.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_RefundDetailFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetDateTimeByName.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_RefundSummary.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFBCounterDash.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_RefundSummaryFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFBCounterDashPerMenu.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_RegistrasiReportSummary.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GETFoodCourtSalesLog.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TicketSalesReportDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFooterDepositoDetailTotal.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TicketSalesReportSummary.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFooterPrint.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TicketSalesReportSummaryFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFormatLaporanHarian.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TopupTransaksiDetail.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetFormatLaporanPeriodik.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TopupTransaksiDetailFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetGridKeranjangFoodCourtReprint.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TopupTransaksiSummary.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetGridTicket.sql" />
+    <Build Include="dbo\Stored Procedures\WebReportSP_TopupTransaksiSummaryFooter.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetHakakses.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteDiskonMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetHeaderPrint.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteProductMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetHistoryAcc.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteSuplierMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetJaminan.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteTenantMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetJenisTicketDash.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteTicketMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetListTenant.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FDeleteUserMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogAccount.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveCompanyProfile.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogCashierTambahModal.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveEditFormDiskon.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogClosing.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveEditFormSTenant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogClosing_V1_0_0_9.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveEditFormSuplier.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogClosingUpload.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveEditFormTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogDeposit.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveEditFormUserMan.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogEDCTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormDiskon.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogEmoneyTrxAccount.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormSProduct.sql" />
+    <Build Include="dbo\Stored Procedures\SP_getLogFoodcourtTransaksi.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormSTenant.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogHistoryAccountFNB.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormSuplier.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogHistoryAccountRefund.sql" />
+    <Build Include="dbo\Stored Procedures\WebSP_FSaveNewFormTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetLogHistoryAccountTicket.sql" />
+    <Build Include="dbo\Stored Procedures\SP_GetBarangbyName.sql" />
+  </ItemGroup>
+</Project>

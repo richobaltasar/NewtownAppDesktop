@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dt_grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_grid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -125,12 +127,34 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "STOCK OPNAME";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Location = new System.Drawing.Point(0, 648);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1317, 5);
+            this.panel6.TabIndex = 77;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1317, 5);
+            this.panel4.TabIndex = 78;
+            // 
             // StockOpname
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1317, 639);
+            this.ClientSize = new System.Drawing.Size(1317, 653);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -160,5 +184,7 @@
         public System.Windows.Forms.DataGridView dt_grid2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel4;
     }
 }

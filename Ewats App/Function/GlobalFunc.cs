@@ -2805,7 +2805,7 @@ namespace Ewats_App.Function
             DataGridViewColumn column6 = dt_grid.Columns[5];
 
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
+            dt_grid.Dock = DockStyle.Fill;
             dt_grid.BorderStyle = BorderStyle.None;
             dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dt_grid.ScrollBars = ScrollBars.Both;
@@ -2828,7 +2828,7 @@ namespace Ewats_App.Function
             DataGridViewColumn column2 = dt_grid.Columns[1];
 
             // Initialize basic DataGridView properties.
-            dt_grid.Dock = DockStyle.None;
+            dt_grid.Dock = DockStyle.Fill;
             dt_grid.BorderStyle = BorderStyle.None;
             dt_grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dt_grid.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -3030,7 +3030,16 @@ namespace Ewats_App.Function
                 using (var connection = conn)
                 {
                     connection.Open();
-                    string sql = "exec SP_GetBarang "+Tenant;
+                    string sql = "";
+                    if (Tenant == "PERSEWAAN")
+                    {
+                        sql = "exec SP_GetListSewabyName";
+                    }
+                    else
+                    {
+                       sql = "exec SP_GetBarang " + Tenant;
+                    }
+                     
                     using (var command = new SqlCommand(sql, connection))
                     {
                         command.CommandTimeout = 0;

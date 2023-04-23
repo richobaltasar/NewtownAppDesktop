@@ -98,7 +98,7 @@ namespace Ewats_App.Page
                 s += "ID Transaction\t: TRX" + Datetime.Replace("/", "").Replace(":", "").Replace(" ", "") + Environment.NewLine;
                 s += "Merchant ID \t: " + f.GetComputerName() + Environment.NewLine;
                 s += "Nama Petugas \t: " + f.GetNamaUser(General.IDUser) + Environment.NewLine;
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Transaksi Registrasi " + Environment.NewLine ;
                 foreach (var ticket in RegisCashPayment.tiket)
                 {
@@ -110,12 +110,12 @@ namespace Ewats_App.Page
                     s += "Diskon \t\t: " + ticket.Diskon + "% - "+ f.ConvertToRupiah(ticket.TotalDiskon) + Environment.NewLine;
                     s += "Total - Diskon \t: " + f.ConvertToRupiah(ticket.TotalAfterDiskon) + Environment.NewLine ;
                 }
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Total Beli Tiket \t: " + f.ConvertToRupiah(RegisCashPayment.TotalBeliTiket) + Environment.NewLine;
 
                 if (Data != null)
                 {
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Transaksi Persewaan " + Environment.NewLine;
 
                     decimal d = 0;
@@ -124,7 +124,7 @@ namespace Ewats_App.Page
                         d++;
                         s += d + ". " + Items.NamaItem + " - " + Items.Qtx + "\t : " + f.ConvertToRupiah((Items.Harga * Items.Qtx)) + Environment.NewLine;
                     }
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Total Belanja \t\t: " + f.ConvertToRupiah(Data.Pay.TotalBayar) + Environment.NewLine;
                 }                
 
@@ -143,21 +143,22 @@ namespace Ewats_App.Page
 
                 if (RegisCashPayment.Cashback > 0)
                 {
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Cashback \t: - " + f.ConvertToRupiah(RegisCashPayment.Cashback) + Environment.NewLine;
                 }
 
                 if (RegisCashPayment.Topup > 0)
                 {
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Topup Emoney \t: " + f.ConvertToRupiah(RegisCashPayment.Topup) + Environment.NewLine;
                 }
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Total \t\t: " + f.ConvertToRupiah(RegisCashPayment.TotalAll) + Environment.NewLine;
 
                 if (RegisCashPayment.Payment != null)
                 {
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Payment \t: " + RegisCashPayment.Payment.JenisTransaksi + Environment.NewLine;
                     if (RegisCashPayment.Payment.PayEmoney > 0)
                     {
@@ -175,7 +176,7 @@ namespace Ewats_App.Page
                     }
                     if (RegisCashPayment.Payment.PayEmoney > 0)
                     {
-                        s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                        s += "-------------------------------------------------------" + Environment.NewLine;
                         s += "Account Number \t: " + RegisCashPayment.Card.IdCard + "-" + f.ConvertDecimal(RegisCashPayment.Card.CodeIdAfter).ToString() + Environment.NewLine;
                         s += "Emoney Before \t: " + f.ConvertToRupiah(RegisCashPayment.Card.SaldoEmoney) + Environment.NewLine;
                         s += "Emoney Current \t: " + f.ConvertToRupiah(RegisCashPayment.Card.SaldoEmoneyAfter) + Environment.NewLine;
@@ -183,7 +184,7 @@ namespace Ewats_App.Page
                     }
                     else
                     {
-                        s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                        s += "-------------------------------------------------------" + Environment.NewLine;
                         s += "Account Number \t: " + RegisCashPayment.Card.IdCard + "-" + f.ConvertDecimal(RegisCashPayment.Card.CodeIdAfter).ToString() + Environment.NewLine;
                         s += "Previous Balance : " + f.ConvertToRupiah(RegisCashPayment.Card.SaldoEmoney) + Environment.NewLine;
                         s += "Current Balance \t: " + f.ConvertToRupiah(RegisCashPayment.Card.SaldoEmoneyAfter) + Environment.NewLine;
@@ -191,7 +192,7 @@ namespace Ewats_App.Page
                     }
                 }
 
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
 
                 foreach (string pfoot in f.GetFooterPrint())
                 {
@@ -205,24 +206,24 @@ namespace Ewats_App.Page
                     s += printkolom.Title + Environment.NewLine;
                     s += Environment.NewLine;
                     s += "ID Ticket : " + printkolom.NoTicket + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.Nama + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.MoKtp + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.NoTelp + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.Alamat + Environment.NewLine+ Environment.NewLine;
 
-                    s += "-------------------------------------------------------" + Environment.NewLine + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "ID Ticket : " + printkolom.NoTicket + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.Nama + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.MoKtp + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.NoTelp + Environment.NewLine;
-                    s += ".................................................................." + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += printkolom.Alamat + Environment.NewLine + Environment.NewLine;
                     
                 }
@@ -267,17 +268,17 @@ namespace Ewats_App.Page
                 s += "ID Transaction\t: TRX" + datetime.Replace("/", "").Replace(":", "").Replace(" ", "") + Environment.NewLine;
                 s += "Merchant ID \t: " + f.GetComputerName() + Environment.NewLine;
                 s += "Nama Petugas \t: " + f.GetNamaUser(General.IDUser) + Environment.NewLine;
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Transaksi Topup " + Environment.NewLine;
                 s += "Nominal Topup \t: " + f.ConvertToRupiah(TopupCashPayment.NominalTopup) + Environment.NewLine;
                 s += "Uang dibayarkan  : " + f.ConvertToRupiah(TopupCashPayment.Pay.TerimaUang) + Environment.NewLine;
                 s += "Uang kembalian \t: "+f.ConvertToRupiah(TopupCashPayment.Pay.Kembalian) + Environment.NewLine;
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Account Number \t: " + TopupCashPayment.Card.IdCard +"-"+f.ConvertDecimal(TopupCashPayment.Card.CodeId).ToString()+ Environment.NewLine;
                 s += "Previous Balance : "+f.ConvertToRupiah(TopupCashPayment.Card.SaldoEmoney) + Environment.NewLine;
                 s += "Current Balance   : "+f.ConvertToRupiah(TopupCashPayment.Card.SaldoEmoneyAfter) + Environment.NewLine;
 
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 foreach (string pfoot in f.GetFooterPrint())
                 {
                     s += pfoot + Environment.NewLine;
@@ -323,7 +324,7 @@ namespace Ewats_App.Page
                 s += "ID Transaction\t: TRX" + datetime.Replace("/", "").Replace(":", "").Replace(" ", "") + Environment.NewLine;
                 s += "Merchant ID \t: " + f.GetComputerName() + Environment.NewLine;
                 s += "Nama Petugas \t: " + f.GetNamaUser(General.IDUser) + Environment.NewLine;
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Transaksi Foodcourt " + Environment.NewLine;
 
                 decimal d = 0;
@@ -333,18 +334,18 @@ namespace Ewats_App.Page
                     d++;
                     s += d + ". " + Items.NamaItem + " - " + Items.Qtx + "\t : " + f.ConvertToRupiah((Items.Harga * Items.Qtx)) + Environment.NewLine;
                 }
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 s += "Total \t\t: "+f.ConvertToRupiah(Data.Pay.TotalBayar) + Environment.NewLine;
 
                 if (Data.Pay != null)
                 {
-                    s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                    s += "-------------------------------------------------------" + Environment.NewLine;
                     s += "Payment \t: " + Data.Pay.JenisTransaksi + Environment.NewLine;
                     s += "Uang dibayarkan  : " + f.ConvertToRupiah(Data.Pay.TerimaUang) + Environment.NewLine;
                     s += "Uang kembalian \t: " + f.ConvertToRupiah(Data.Pay.Kembalian) + Environment.NewLine;
                 }
 
-                s += "------------------------------------------------------------------------------------" + Environment.NewLine;
+                s += "-------------------------------------------------------" + Environment.NewLine;
                 foreach (string pfoot in f.GetFooterPrint())
                 {
                     s += pfoot + Environment.NewLine;
@@ -1743,6 +1744,14 @@ namespace Ewats_App.Page
         private void TxtUangTerima_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            panel3.Location = new Point(
+    this.ClientSize.Width / 2 - panel3.Size.Width / 2,
+    this.ClientSize.Height / 2 - panel3.Size.Height / 2);
+            panel3.Anchor = AnchorStyles.None;
         }
 
         private void button10_Click(object sender, EventArgs e)

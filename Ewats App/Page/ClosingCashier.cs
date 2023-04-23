@@ -191,7 +191,10 @@ namespace Ewats_App.Page
         private void button13_Click(object sender, EventArgs e)
         {
             Ulang: 
+            
             decimal input = f.ConvertDecimal(txtUangCashBox.Text);
+            if(input != 0)
+            { 
             if (input != f.ConvertDecimal(DataModel.TotalCashBox))
             {
                 var res = MessageBox.Show("Uang yang anda masukkan tidak sesuai dengan jumlah Uang pada Cashbox, " +
@@ -280,6 +283,11 @@ namespace Ewats_App.Page
                         }
                     }
                 }
+            }
+            }
+            else
+            {
+                var res3 = MessageBox.Show("Nominal yang diinput masih kosong", "Submit Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

@@ -175,9 +175,9 @@
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(35, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 29);
+            this.label12.Size = new System.Drawing.Size(75, 29);
             this.label12.TabIndex = 67;
-            this.label12.Text = "Data Diskon";
+            this.label12.Text = "Topup";
             // 
             // panel1
             // 

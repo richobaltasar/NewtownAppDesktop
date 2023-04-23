@@ -33,6 +33,8 @@
             this.txtMessageBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtBacaKartu = new System.Windows.Forms.RichTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +80,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtMessageBox);
             this.panel1.Controls.Add(this.TxtBacaKartu);
@@ -97,6 +101,26 @@
             this.TxtBacaKartu.Size = new System.Drawing.Size(424, 199);
             this.TxtBacaKartu.TabIndex = 2;
             this.TxtBacaKartu.Text = "";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(446, 5);
+            this.panel4.TabIndex = 71;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.Location = new System.Drawing.Point(0, 369);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(446, 5);
+            this.panel6.TabIndex = 77;
             // 
             // Print
             // 
@@ -125,5 +149,7 @@
         public System.Windows.Forms.TextBox txtMessageBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox TxtBacaKartu;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
     }
 }
